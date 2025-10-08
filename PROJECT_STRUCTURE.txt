@@ -1,0 +1,37 @@
+.
+./requirements.txt
+./PROJECT_STRUCTURE.txt
+./BOM
+./BOM/BOM OM-FlexGrid-Rigid-PCB V0.csv
+./HARDWARE_SHOPPING_LIST.md
+./ml_training
+./ml_training/train_gesture_model.py
+./integration
+./integration/config.example.json
+./integration/ble_receiver.py
+./integration/mcp_integration_guide.md
+./SUMMARY.md
+./QUICK_START.md
+./README.md
+./firmware
+./firmware/gesture_data_collector.ino
+./firmware/gesture_recognition_ble.ino
+./FILE_GUIDE.md
+./PROJECT_README.md
+./HACKATHON_PLAN.md
+./KiCad
+./KiCad/README.md
+./KiCad/OM-FlexGrid V0
+./KiCad/OM-FlexGrid V0/OM-60-Rigid-PCB
+./KiCad/OM-FlexGrid V0/SnesorPad-01.svg
+./KiCad/OM-FlexGrid V0/README.md
+./KiCad/OM-FlexGrid V0/SnesorPad.svg
+./KiCad/OM-FlexGrid V0/OM-60-Flex
+./KiCad/OM-FlexGrid V1
+./KiCad/OM-FlexGrid V1/OM-FlexGrid-Flex
+./KiCad/OM-FlexGrid V1/README.md
+./KiCad/OM-FlexGrid V1/OM-FlexGrid-Rigid-PCB
+./Schematics
+./Schematics/OM-FLexGrid-Rigit-Schematic.pdf
+./Schematics/OM-FlexGrid-Rigid-PCB — Schematic-V1.jpg
+./Schematics/OM-FLexGrid-Rigit-Schematic-V1.pdf
