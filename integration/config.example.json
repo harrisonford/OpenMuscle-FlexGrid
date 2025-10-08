@@ -1,0 +1,162 @@
+{
+  "_comment": "OpenMuscle Gesture Control Configuration",
+  "_instructions": "Copy this file to config.json and fill in your API keys",
+  
+  "device": {
+    "name": "OpenMuscle-FlexGrid",
+    "bluetooth_address": null,
+    "reconnect_attempts": 5,
+    "reconnect_delay_seconds": 2
+  },
+  
+  "gesture_recognition": {
+    "confidence_threshold": 0.75,
+    "debounce_time_seconds": 1.0,
+    "enabled_gestures": [
+      "point_up",
+      "point_down",
+      "point_left",
+      "point_right",
+      "fist_close",
+      "fist_open",
+      "pinch",
+      "swipe_left",
+      "swipe_right",
+      "twist_cw",
+      "twist_ccw"
+    ]
+  },
+  
+  "ai_integration": {
+    "enabled": true,
+    "provider": "openai",
+    "openai_api_key": "sk-your-openai-key-here",
+    "openai_model": "gpt-4-turbo-preview",
+    "anthropic_api_key": "sk-ant-your-anthropic-key-here",
+    "anthropic_model": "claude-3-5-sonnet-20241022",
+    "use_local_fallback": true,
+    "max_tokens": 1024,
+    "timeout_seconds": 5
+  },
+  
+  "smart_home": {
+    "philips_hue": {
+      "enabled": false,
+      "bridge_ip": "192.168.1.100",
+      "api_token": "your-hue-token-here",
+      "lights": {
+        "ceiling_light": 1,
+        "table_lamp": 2,
+        "floor_lamp": 3
+      }
+    },
+    
+    "home_assistant": {
+      "enabled": false,
+      "url": "http://homeassistant.local:8123",
+      "token": "your-ha-long-lived-access-token",
+      "entities": {
+        "ceiling_light": "light.living_room_ceiling",
+        "table_lamp": "light.living_room_table",
+        "tv": "media_player.living_room_tv",
+        "front_door": "lock.front_door"
+      }
+    },
+    
+    "mqtt": {
+      "enabled": false,
+      "broker": "mqtt.local",
+      "port": 1883,
+      "username": "your-username",
+      "password": "your-password",
+      "topics": {
+        "light_control": "home/livingroom/light",
+        "door_control": "home/door/lock"
+      }
+    }
+  },
+  
+  "services": {
+    "uber": {
+      "enabled": false,
+      "api_key": "your-uber-api-key",
+      "default_destination": "home",
+      "destinations": {
+        "home": {
+          "latitude": 37.7749,
+          "longitude": -122.4194,
+          "name": "Home"
+        },
+        "work": {
+          "latitude": 37.7849,
+          "longitude": -122.4094,
+          "name": "Work"
+        }
+      }
+    },
+    
+    "spotify": {
+      "enabled": false,
+      "client_id": "your-spotify-client-id",
+      "client_secret": "your-spotify-client-secret",
+      "device_name": "Living Room Speaker"
+    }
+  },
+  
+  "spatial_mapping": {
+    "enabled": true,
+    "calibration_required": false,
+    "device_positions": {
+      "ceiling_light": {
+        "azimuth": 0,
+        "elevation": 45,
+        "distance": 3.0,
+        "description": "Ceiling, north"
+      },
+      "table_lamp": {
+        "azimuth": 90,
+        "elevation": 0,
+        "distance": 1.5,
+        "description": "Table, east"
+      },
+      "tv": {
+        "azimuth": 180,
+        "elevation": 0,
+        "distance": 3.0,
+        "description": "Wall, south"
+      },
+      "door": {
+        "azimuth": 270,
+        "elevation": 0,
+        "distance": 4.0,
+        "description": "Door, west"
+      }
+    },
+    "pointing_tolerance_degrees": 30
+  },
+  
+  "user_preferences": {
+    "user_id": "user_123",
+    "default_light_brightness": 80,
+    "require_confirmation_for_unlock": true,
+    "gesture_sensitivity": "medium",
+    "haptic_feedback": true,
+    "audio_feedback": false,
+    "visual_feedback": true
+  },
+  
+  "logging": {
+    "level": "INFO",
+    "file": "logs/gesture_control.log",
+    "console": true,
+    "save_gestures": true,
+    "gestures_file": "logs/gesture_history.jsonl"
+  },
+  
+  "demo_mode": {
+    "enabled": false,
+    "simulate_devices": true,
+    "fake_api_responses": true,
+    "show_debug_info": true
+  }
+}
